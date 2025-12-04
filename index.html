@@ -1,128 +1,221 @@
-¿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <title>Mariana Marquez - Carta de Presentación</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mariana Marquez — Portafolio</title>
+
   <style>
-    body { font-family: Arial; margin: 0; padding: 0; background:#f8f8f8; line-height: 1.6;}
-    header { text-align:center; padding:60px 20px; background:white; box-shadow:0 2px 5px rgba(0,0,0,0.1); }
-    h1 { margin:0; font-size:40px; }
-    p.subtitle { color:#555; font-size:18px; }
-    section { width:90%; max-width:800px; margin:40px auto; }
-    .card { background:white; padding:25px; margin-bottom:20px; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.08); }
-    h2 { margin-top:0; }
-    a { color:#0066ff; text-decoration:none; }
-    footer { text-align:center; padding:20px; color:#666; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #c1f7d5, #e0ffe9); 
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #ffffffdd;
+      backdrop-filter: blur(10px);
+      padding: 15px 30px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      z-index: 10;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      border-radius: 0 0 12px 12px;
+    }
+
+    nav a {
+      text-decoration: none;
+      font-weight: bold;
+      color: #2a4d32;
+      padding: 8px 14px;
+      border-radius: 8px;
+      transition: 0.2s;
+    }
+
+    nav a:hover {
+      background: #b6e6c2;
+      color: #1e3b25;
+    }
+
+    .hero {
+      margin-top: 100px;
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .hero h1 {
+      font-size: 44px;
+      margin: 10px 0;
+      background: linear-gradient(90deg, #4fb878, #2e704c);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #3d5b45;
+      max-width: 650px;
+      margin: 0 auto;
+    }
+
+    section {
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 20px;
+    }
+
+    .card {
+      background: #ffffffcc;
+      backdrop-filter: blur(6px);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      margin-bottom: 40px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+    }
+
+    h2 {
+      margin-top: 0;
+      font-size: 28px;
+      color: #1e4d33;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin-top: 20px;
+    }
+
+    .project {
+      background: #ffffffcc;
+      backdrop-filter: blur(5px);
+      border-radius: 14px;
+      padding: 20px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+      transition: 0.2s;
+    }
+
+    .project:hover {
+      transform: scale(1.03);
+      background: #ffffffee;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #1e4d33;
+      margin-top: 40px;
+    }
   </style>
 </head>
+
 <body>
-  <header>
+
+  <nav>
+    <a href="#sobremi">Sobre mí</a>
+    <a href="#proyectos">Proyectos</a>
+    <a href="#hobbies">Hobbies</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <div class="hero">
     <h1>Mariana Marquez</h1>
-    <p class="subtitle">Ciencia de Datos</p>
-  </header>
+    <p>Data Analyst • ITAM • Retail • Visualización • Ballet</p>
+  </div>
 
-  <section>
-
-    <!-- CARTA DE PRESENTACIÓN -->
+  <section id="sobremi">
     <div class="card">
       <h2>Sobre mí</h2>
       <p>
-        ¡Hola! Soy Mariana, estudiante de Ciencia de Datos de séptimo semestre en el ITAM. 
-        Me apasiona analizar datos y encontrar historias, patrones y accionables que realmente 
-        ayuden a tomar decisiones. Creo profundamente en el poder de los datos para entender 
-        problemas reales y proponer soluciones con impacto.
+        Soy Mariana, estudiante de 7mo semestre de Ciencia de Datos en el ITAM. 
+        Me apasiona analizar datos, encontrar patrones y convertir información 
+        en decisiones reales y accionables.
       </p>
 
       <p>
-        Actualmente trabajo en <strong>Mercado Pago, en el equipo de Retail</strong>, donde me enfoco en 
-        <strong>automatizaciones, análisis de activación y desempeño de dispositivos, construcción de dashboards, 
-        depuración de datos, flujos automáticos y generación de insights accionables</strong> para mejorar la experiencia 
-        de los retailers y del usuario final. 
-        He trabajado con herramientas como Python, Google Sheets + Apps Script, Flows de Mercado Libre, Tableau 
-        y múltiples procesos de data cleaning y modelado.
+        Trabajo en Mercado Pago dentro del equipo de Retail, donde hago automatizaciones,
+        dashboards, limpieza de datos, análisis de activación, flujos automáticos 
+        y generación de insights para el equipo comercial.
       </p>
 
       <p>
-        Más allá de los datos, me encanta la lectura: disfruto muchísimo las <strong>novelas clásicas, de romance 
-        y de ciencia ficción</strong>. También soy bailarina desde pequeña; he tomado clases de <strong>ballet, danza 
-        contemporánea, jazz</strong> y en general todo lo relacionado con movimiento y expresión. En mis tiempos 
-        libres me gusta dormir, ver series (mi favorita es <strong>The Office</strong>) y explorar nuevas cosas que me inspiren.
-      </p>
-
-    </div>
-
-    <!-- PROYECTOS -->
-    <div class="card">
-      <h2>Proyectos Destacados</h2>
-      <ul>
-
-        <li><strong>Historia de Datos – Robo de Vehículos en Sinaloa</strong><br>
-        Proyecto narrativo donde analicé datos reales de violencia, robos de vehículos y dinámicas criminales, 
-        integrando mapas, series de tiempo, análisis cualitativo y storytelling para una historia de impacto.</li>
-
-        <br>
-
-        <li><strong>Dashboards Retail (Mercado Pago)</strong><br>
-        Análisis de activación M0/M1, desempeño por retailer, tiempos de activación (Lead Time), 
-        reportes automáticos, construcción de visualizaciones y flujos automatizados para equipos comerciales.</li>
-
-        <br>
-
-        <li><strong>PySpark + Hadoop – Calidad del Aire en CDMX</strong><br>
-        Pipeline completo en PySpark con procesamiento distribuido de más de un año de datos atmosféricos 
-        (O₃, NO₂, NOx, CO, SO₂). Incluyó limpieza, transformación, agregaciones, series temporales, desviación estándar 
-        y visualizaciones para identificar riesgos ambientales y patrones de contaminación.</li>
-
-        <br>
-
-        <li><strong>Machine Learning – Modelos de Clustering</strong><br>
-        Implementación de K-Means, clustering jerárquico, mezclas de gaussianas (GMM), vector quantization 
-        y análisis en alta dimensión aplicados a datos complejos.</li>
-
-        <br>
-
-        <li><strong>Machine Learning – Redes Neuronales</strong><br>
-        Implementación de redes multicapa (MLP), funciones de activación, optimización, backpropagation, 
-        regularización y experimentos con overfitting/underfitting.</li>
-
-        <br>
-
-        <li><strong>PCA y Modelos de Reducción de Dimensión</strong><br>
-        Aplicación de PCA, SVD y métodos de bajo rango para procesar datos de alta dimensión, analizar 
-        varianza y crear visualizaciones interpretables.</li>
-
-        <br>
-
-        <li><strong>Dashboards Interactivos en Tableau</strong><br>
-        Análisis del caso Restaurantes: ventas por mesero, desempeño, propinas, métricas claves y un dashboard completo con KPIs.</li>
-
-        <br>
-
-        <li><strong>Proyectos Web (HTML/CSS/JS)</strong><br>
-        Desarrollo de sitios web, almacenamiento con localStorage/sessionStorage, consumo de APIs (Spotify), 
-        formularios interactivos y clonación de estilo de páginas reales.</li>
-
-        <br>
-
-        <li><strong>Hadoop – MapReduce</strong><br>
-        Implementación de mapper y reducer para análisis de textos, conteo de palabras y agregaciones distribuidas.</li>
-
-      </ul>
-    </div>
-
-    <!-- CONTACTO -->
-    <div class="card">
-      <h2>Contacto</h2>
-      <p>
-        GitHub: <a href="https://github.com/marmarquezgi" target="_blank">github.com/marmarquezgi</a><br>
-        Email: <a href="marmargil24@gmail.com">marmargil24@gmail.com</a><br>
-        Instagram: <a href="#">@marmarquezgi</a>
+        También me encanta la danza: ballet, contemporáneo y jazz.
+        Disfruto leer novelas clásicas, romance y ciencia ficción.
+        Mi serie favorita es The Office.
       </p>
     </div>
-
   </section>
 
-  <footer>© 2025 Mariana Marquez — Carta de Presentación</footer>
+  <section id="proyectos">
+    <div class="card">
+      <h2>Mis Proyectos</h2>
+
+      <div class="grid">
+
+        <div class="project">
+          <h3>Historia de Datos — Robo de Vehículos</h3>
+          <p>Análisis narrativo sobre violencia y robo de autos en Sinaloa.</p>
+        </div>
+
+        <div class="project">
+          <h3>Dashboards Retail</h3>
+          <p>KPIs M0/M1, Lead Time, automatizaciones y análisis de activación.</p>
+        </div>
+
+        <div class="project">
+          <h3>PySpark + Hadoop — Calidad del Aire CDMX</h3>
+          <p>Pipeline distribuido para analizar más de un año de datos atmosféricos.</p>
+        </div>
+
+        <div class="project">
+          <h3>Machine Learning</h3>
+          <p>K-means, clustering jerárquico, PCA, GMM, alta dimensión y redes neuronales.</p>
+        </div>
+
+        <div class="project">
+          <h3>Páginas Web Interactivas</h3>
+          <p>JS, APIs, tarjetas dinámicas, formularios y sitios web completos.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="hobbies">
+    <div class="card">
+      <h2>Hobbies</h2>
+      <ul>
+        <li>Ballet, jazz y danza contemporánea</li>
+        <li>Leer novelas clásicas, romance y sci-fi</li>
+        <li>Ver The Office</li>
+        <li>Dormir como profesión extra</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <div class="card">
+      <h2>Contacto</h2>
+      <p>Email: <a href="mailto:marmarquezgi@itammail.mx">marmarquezgi@itammail.mx</a></p>
+      <p>GitHub: <a href="https://github.com/marmarquezgi">github.com/marmarquezgi</a></p>
+      <p>Instagram: @marmarquezgi</p>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Mariana Marquez — Portafolio Profesional
+  </footer>
+
 </body>
 </html>
